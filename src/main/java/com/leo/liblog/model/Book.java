@@ -21,8 +21,20 @@ public class Book {
 	private String bookTitle;
 	@Column(nullable = false)
 	private String bookContent;
-	@Column(nullable = false)
-	private Date bookPostDate;
+//	@Column(nullable = false,columnDefinition = "TEXT" )
+//	private Date bookPostDate;
 	
+	public Long getBookId() {
+		return bookId;
+	}
+//	public Date getBookPostDate() {
+//		return bookPostDate;
+//	}
+	public void setBookTitle( String bookTitle) {
+		this.bookTitle = bookTitle;
+	}
+	public void setBookContent(String bookContent) {
+		this.bookContent = bookContent;
+	}
 	
 }
