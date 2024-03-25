@@ -13,8 +13,6 @@ import lombok.ToString;
 
 @Entity
 @ToString
-@Getter
-@Setter
 public class Book {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long bookId;
@@ -29,9 +27,18 @@ public class Book {
 	public Long getBookId() {
 		return bookId;
 	}
+	public String getBookTitle() {
+		return bookTitle;
+	}
+	public String getBookContent() {
+		return bookContent;
+	}
 //	public Date getBookPostDate() {
 //		return bookPostDate;
 //	}
+	public void setBookId(Long bookId) {
+		this.bookId = bookId;
+	}
 	public void setBookTitle( String bookTitle) {
 		this.bookTitle = bookTitle;
 	}

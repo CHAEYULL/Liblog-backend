@@ -21,5 +21,13 @@ public class BookService {
 		book.setBookContent(formData.get("bookContent"));
  		bookRepository.save(book);
 	}
+	public void editPostService(Map<String, String> formData) {
+		Book book = new Book();
+		String bookId = formData.get("id");
+		book.setBookId(Long.parseLong(bookId));
+		book.setBookTitle(formData.get("bookTitle"));
+		book.setBookContent(formData.get("bookContent"));
+		bookRepository.save(book);
+	}
 
 }
